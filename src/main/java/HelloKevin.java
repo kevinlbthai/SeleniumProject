@@ -1,4 +1,6 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -10,9 +12,24 @@ public class HelloKevin {
         /*
            Manual setup: System.getProperty("webdriver.chrome.driver", "D:\\External WebDriver\\chromedriver_win32_Latest");
          */
+
+
+        // Create new instance of ChromeDriver
         WebDriver chromeDriver = new ChromeDriver();
         chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
+        // And now use this to visit Google
         chromeDriver.get("http://www.google.com");
+
+        // Find the text input element by its name
+        WebElement element = chromeDriver.findElement(By.name("q"));
+
+        // Enter something to search for
+        element.sendKeys("Cheese!");
+
+        // Now submit the form
+        element.submit();
+
         chromeDriver.quit();
     }
 }
