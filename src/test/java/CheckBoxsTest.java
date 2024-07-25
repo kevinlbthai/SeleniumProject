@@ -7,11 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-public class CheckBoxs {
+public class CheckBoxsTest {
 
     @Test
     @DisplayName("Test Checkboxs")
-    public void checkBoxs() throws InterruptedException {
+    public void CheckBoxs() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
 
