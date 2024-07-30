@@ -34,4 +34,20 @@ public class AllureReportTest {
 
         chromeDriver.quit();
     }
+
+    @Test
+    public void AccessInvalidPageTest() {
+
+        // Create new instance of ChromeDriver
+        WebDriver chromeDriver = new ChromeDriver();
+        chromeDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
+        // And now use this to visit Google
+        chromeDriver.get("http://www.google.com");
+
+        Assert.assertNotEquals(chromeDriver.getTitle(), "Facebook", "Title is  Not matched.");
+
+
+        chromeDriver.quit();
+    }
 }
