@@ -2,7 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-!**/allure-results/
+
 
 ### Allure Report ###
 .allure-results/*.json
@@ -40,3 +40,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Allure Report ###
+/allure-results/
