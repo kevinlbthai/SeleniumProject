@@ -4,6 +4,9 @@ target/
 !**/src/test/**/target/
 !**/allure-results/
 
+### Allure Report ###
+.allure-results/*.json
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
